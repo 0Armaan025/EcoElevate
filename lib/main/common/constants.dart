@@ -58,3 +58,43 @@ showSnackBar(BuildContext context, String content) {
     ),
   );
 }
+
+Widget makeDrawer(BuildContext context) {
+  return Drawer(
+    child: ListView(
+      children: <Widget>[
+        UserAccountsDrawerHeader(
+          accountName: Text("John Doe"),
+          accountEmail: Text("johndoe@gmail.com"),
+          currentAccountPicture: CircleAvatar(
+            backgroundImage: NetworkImage(
+                "https://i.pinimg.com/originals/1e/12/0b/1e120bea5d00a3ce2e5a5a466edab08e.jpg"),
+          ),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: <Color>[
+                Colors.green,
+                Colors.lightBlueAccent,
+              ],
+            ),
+          ),
+        ),
+        ListTile(
+          leading: Icon(Icons.home),
+          title: Text("Home"),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.settings),
+          title: Text("Settings"),
+          onTap: () {},
+        ),
+        ListTile(
+          leading: Icon(Icons.logout),
+          title: Text("Log Out"),
+          onTap: () {},
+        ),
+      ],
+    ),
+  );
+}

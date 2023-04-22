@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/home/challenges/widgets/challenges_widget.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -43,6 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: makeDrawer(context),
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
         child: makeAppBar(context),
@@ -84,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.black, fontSize: 22),
                       ),
                       Text(
-                        "15/2/3022",
+                        "${formatted}",
                         style: GoogleFonts.roboto(
                             color: Colors.grey[700], fontSize: 16),
                       ),
@@ -108,7 +110,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 200,
                       width: 150,
                       decoration: BoxDecoration(
-                        color: Colors.lightGreen.shade300,
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.green,
+                            Colors.lightBlueAccent,
+                          ],
+                        ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       alignment: Alignment.center,
@@ -132,7 +139,12 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 200,
                       width: 150,
                       decoration: BoxDecoration(
-                        color: Colors.lightGreen.shade400,
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.lightBlueAccent.shade100,
+                            Colors.blue,
+                          ],
+                        ),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       alignment: Alignment.center,
@@ -163,21 +175,21 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 30,
             ),
             Container(
-              margin: const EdgeInsets.only(left: 20),
+              margin: const EdgeInsets.only(left: 35),
               alignment: Alignment.centerLeft,
               child: Text(
-                "Challenges (only for hackers)",
+                "Challenges.",
                 style: GoogleFonts.roboto(
                   color: Colors.black,
-                  fontSize: 17,
+                  fontSize: 27,
                 ),
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [],
-              ),
+            //ugh super bored here
+            //yaar, instead of putting everything in one file, let's make moreeeee
+            EnergySavingChallengesWidget(),
+            const SizedBox(
+              height: 30,
             ),
           ],
         ),
