@@ -15,7 +15,7 @@ var firestore = FirebaseFirestore.instance;
 String appName = "EcoElevate";
 String appTagline = "Small steps, big impact.";
 
-Widget makeAppBar(BuildContext context, {String title = "TerraTrack"}) {
+Widget makeAppBar(BuildContext context, {String title = "EcoElevate"}) {
   return AppBar(
     backgroundColor: Colors.green,
     title: Text(title),
