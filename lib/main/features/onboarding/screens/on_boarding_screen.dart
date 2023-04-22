@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:terratrack/main/common/constants.dart';
 import 'package:terratrack/main/features/auth/screens/login_screen/login_screen.dart';
+import 'package:terratrack/main/features/home/screens/home_screen.dart';
 
 class OnboardingScreen extends StatefulWidget {
   @override
@@ -10,6 +12,14 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   final PageController _pageController = PageController(initialPage: 0);
 
+  String uid = "";
+
+  @override
+  void initState() {
+    super.initState();
+    uid = firebaseAuth.currentUser?.uid ?? '';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,12 +28,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           PageView(
             controller: _pageController,
             children: [
-              OnboardingPage(
-                title: "Reduce Your Carbon Footprint",
-                description:
-                    "Track your carbon footprint and get tips on how to reduce it",
-                image: "assets/images/carbon_footprint.png",
-              ),
               OnboardingPage(
                 title: "Save Energy",
                 description:
@@ -43,10 +47,16 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             left: 20,
             child: GestureDetector(
               onTap: () {
-                if (_pageController.page!.toInt() == 2) {
+                if (_pageController.page!.toInt() == 1) {
                   print("it is");
-                  moveScreen(
-                      context, isPushReplacement: true, const LoginScreen());
+
+                  if (firebaseAuth.currentUser == null) {
+                    moveScreen(
+                        context, isPushReplacement: true, const LoginScreen());
+                  } else {
+                    moveScreen(
+                        context, isPushReplacement: true, const HomeScreen());
+                  }
                 } else {
                   _pageController.animateToPage(
                     _pageController.page!.toInt() + 1,

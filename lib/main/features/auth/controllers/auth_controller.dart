@@ -2,6 +2,9 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:terratrack/main/common/constants.dart';
 import 'package:terratrack/main/features/auth/models/user.dart';
+import 'package:terratrack/main/features/auth/screens/login_screen/login_screen.dart';
+import 'package:terratrack/main/features/auth/screens/signup_screen/signup_screen.dart';
+import 'package:terratrack/main/features/home/screens/home_screen.dart';
 
 class AuthController {
   //sign up lol
@@ -26,6 +29,7 @@ class AuthController {
         model.profilePicture = downloadUrl;
       });
       firestore.collection('users').doc(uid).set(model.toMap());
+      moveScreen(context, HomeScreen());
     });
   }
 
@@ -33,7 +37,7 @@ class AuthController {
     firebaseAuth
         .signInWithEmailAndPassword(email: email, password: pass)
         .then((value) {
-      print("done");
+      moveScreen(context, HomeScreen());
     });
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/auth/controllers/auth_controller.dart';
 
 import 'package:terratrack/main/features/auth/screens/signup_screen/signup_screen.dart';
 
@@ -12,9 +13,13 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   Widget makeButton(BuildContext context, String content) {
     return GestureDetector(
-      onTap: () async {},
+      onTap: () async {
+        login(context);
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 60),
         width: 270,
@@ -33,6 +38,11 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       ),
     );
+  }
+
+  void login(BuildContext context) {
+    AuthController()
+        .signIn(context, _emailController.text, _passwordController.text);
   }
 
   Widget makeTextField(
@@ -58,9 +68,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final _emailController = TextEditingController();
-    final _passwordController = TextEditingController();
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),
