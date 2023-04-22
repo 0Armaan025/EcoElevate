@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920174755343",
+    "project_id": "ecoelevate-00d",
+    "storage_bucket": "ecoelevate-00d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920174755343:android:80ddce6c0c282d31606d7a",
+        "android_client_info": {
+          "package_name": "com.example.terratrack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920174755343-u18ig97ndo2143h72lbdrtopr3gqvck9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeIj2ZL14E1vv69kg7biyNAEJwMoaI_0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920174755343-u18ig97ndo2143h72lbdrtopr3gqvck9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

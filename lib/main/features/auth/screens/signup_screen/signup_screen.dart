@@ -111,11 +111,48 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 child: Card(
                   elevation: 2.0,
                   child: Container(
-                    height: 400,
+                    height: 520,
                     width: double.infinity,
                     color: Colors.grey[200],
                     child: Column(
                       children: [
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        Center(
+                          child: Stack(
+                            children: [
+                              imageFile == null
+                                  ? CircleAvatar(
+                                      radius: 40,
+                                      backgroundImage: NetworkImage(
+                                          'https://propami.com/assets/corals/images/avatars/avatar_1.png'),
+                                    )
+                                  : CircleAvatar(
+                                      radius: 40,
+                                      backgroundImage: FileImage(imageFile!),
+                                    ),
+                              Positioned(
+                                child: IconButton(
+                                  onPressed: () {
+                                    pickImage(context);
+                                    setState(() {});
+                                  },
+                                  icon: Icon(
+                                    Icons.add,
+                                    color: Colors.yellow,
+                                    size: 30,
+                                  ),
+                                ),
+                                left: 40,
+                                bottom: -10,
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
                         makeTextField(context, "👲 Please enter your name",
                             _nameController),
                         makeTextField(
