@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/auth/controllers/auth_controller.dart';
+import 'package:terratrack/main/features/auth/models/user.dart';
 import 'package:terratrack/main/features/auth/screens/login_screen/login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -11,9 +13,16 @@ class SignUpScreen extends StatefulWidget {
 }
 
 class _SignUpScreenState extends State<SignUpScreen> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+  final _nameController = TextEditingController();
+  final _phoneNumberController = TextEditingController();
+
   Widget makeButton(BuildContext context, String content) {
     return GestureDetector(
-      onTap: () async {},
+      onTap: () {
+        signUp(context);
+      },
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 60),
         width: 270,
@@ -55,13 +64,21 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
+  void signUp(BuildContext context) {
+    UserModel model = UserModel(
+        name: _nameController.text,
+        profilePicture: '',
+        phoneNumber: _phoneNumberController.text,
+        password: _passwordController.text,
+        uid: uid,
+        email: _emailController.text,
+        streaks: '0');
+
+    AuthController().signUp(context, model);
+  }
+
   @override
   Widget build(BuildContext context) {
-    final _emailController = TextEditingController();
-    final _passwordController = TextEditingController();
-    final _nameController = TextEditingController();
-    final _phoneNumberController = TextEditingController();
-
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, kToolbarHeight),

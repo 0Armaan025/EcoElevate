@@ -27,6 +27,7 @@ Widget makeAppBar(BuildContext context, {String title = "EcoElevate"}) {
 }
 
 File? imageFile;
+String uid = "";
 
 void pickImage(BuildContext context) async {
   final ImagePicker picker = ImagePicker();
