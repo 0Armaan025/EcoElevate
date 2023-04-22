@@ -15,19 +15,28 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Unplug devices when not in use',
       'subtitle': 'Save energy and reduce your bill',
+      'instructions': '',
       'icon': Icons.power_off,
+      'image':
+          'https://5.imimg.com/data5/JS/MK/OG/SELLER-3181704/2-pin-plug-1000x1000.jpg',
       'color': Colors.blue,
       'completed': false,
     },
     {
       'title': 'Use natural light instead of artificial light',
       'subtitle': 'Reduce your energy usage during the day',
+      'instructions': '',
+      'image':
+          'https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?cs=srgb&dl=pexels-pixabay-301599.jpg&fm=jpg',
       'icon': Icons.wb_sunny,
       'color': Colors.yellow,
       'completed': false,
     },
     {
       'title': 'Wash your clothes in cold water',
+      'instructions': '',
+      'image':
+          'https://www.ikea.com/in/en/images/products/renshacka-clothes-cover-transparent-white__1085564_pe860163_s5.jpg?f=s',
       'subtitle': 'Save energy and reduce your bill',
       'icon': Icons.radio,
       'color': Colors.green,
@@ -36,6 +45,9 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Lower your thermostat by 2 degrees',
       'subtitle': 'Save energy and reduce your bill',
+      'instructions': '',
+      'image':
+          'https://media.istockphoto.com/id/1194920571/photo/smart-thermostat-with-a-person-saving-energy-with-a-soft-shadow.jpg?s=612x612&w=0&k=20&c=EJ1JnujV-T1YYjVEEn3taVc0DsQWhaiAPlybKa6nHCw=',
       'icon': Icons.ac_unit,
       'color': Colors.orange,
       'completed': false,
@@ -43,6 +55,9 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Cook meals in batches',
       'subtitle': 'Save energy and reduce your bill',
+      'instructions': '',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9I4Hk8o1RmPlPTVq_YQzFboDDNxrXiprapiq0R4aj1Z1ubacO_orSf5mNYoOsFRqd2hA&usqp=CAU',
       'icon': Icons.local_dining,
       'color': Colors.red,
       'completed': false,
@@ -134,8 +149,11 @@ class _EnergySavingChallengesWidgetState
                             moveScreen(
                               context,
                               ChallengesScreen(
-                                  challengeName: challenges[index]['title'],
-                                  challengeInstructions: 'nothing'),
+                                challengeName: challenges[index]['title'],
+                                challengeInstructions: challenges[index]
+                                    ['instructions'],
+                                image: challenges[index]['image'],
+                              ),
                             );
                           },
                           child: Container(

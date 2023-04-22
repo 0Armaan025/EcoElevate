@@ -105,17 +105,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    elevation: 12.0,
+                    elevation: 22.0,
                     child: Container(
                       height: 200,
                       width: 150,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.green,
-                            Colors.lightBlueAccent,
-                          ],
-                        ),
+                        color: Colors.lightBlueAccent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       alignment: Alignment.center,
@@ -139,12 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 200,
                       width: 150,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.lightBlueAccent.shade100,
-                            Colors.blue,
-                          ],
-                        ),
+                        color: Colors.lightBlueAccent,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       alignment: Alignment.center,

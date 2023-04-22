@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/home/challenges/screens/add_challenge_screen.dart';
 
 class ChallengesScreen extends StatelessWidget {
   final String challengeName;
   final String challengeInstructions;
+  final String image;
   const ChallengesScreen(
       {Key? key,
       required this.challengeName,
-      required this.challengeInstructions})
+      required this.challengeInstructions,
+      required this.image})
       : super(key: key);
 
   @override
@@ -36,6 +40,22 @@ class ChallengesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 40),
+            Container(
+              width: double.infinity,
+              height: 250,
+              margin: const EdgeInsets.symmetric(horizontal: 14),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage('${image}'),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(10),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
             Text(
               'Challenge:',
               style: TextStyle(
@@ -84,7 +104,13 @@ class ChallengesScreen extends StatelessWidget {
                   Icons.add,
                   color: Colors.white,
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  moveScreen(
+                      context,
+                      AddChallengeScreen(
+                        challengeName: challengeName,
+                      ));
+                },
               ),
             ),
           ],
