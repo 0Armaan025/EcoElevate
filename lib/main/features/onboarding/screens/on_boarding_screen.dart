@@ -48,8 +48,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               OnboardingPage(
                 title: "Save Energy",
-                description:
-                    "Monitor your energy usage and get suggestions for reducing it",
+                description: "Monitor your energy usage and know about it!",
                 image: "assets/images/energy_usage.png",
               ),
               OnboardingPage(

@@ -36,7 +36,7 @@
 26-->[androidx.core:core:1.9.0] C:\Users\Paul\.gradle\caches\transforms-3\9008b2a9fb01102d26fd2f78c055a96b\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 27        android:debuggable="true"
 28        android:icon="@mipmap/ic_launcher"
-29        android:label="terratrack" >
+29        android:label="EcoElevate" >
 30        <activity
 31            android:name="com.example.terratrack.MainActivity"
 32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

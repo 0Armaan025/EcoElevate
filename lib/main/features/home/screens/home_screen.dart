@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/home/challenges/screens/chat/chat_screen.dart';
 import 'package:terratrack/main/features/home/challenges/widgets/challenges_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -73,7 +74,18 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 0,
+            ),
+            Container(
+              margin: const EdgeInsets.only(right: 29),
+              width: double.infinity,
+              alignment: Alignment.centerRight,
+              child: IconButton(
+                icon: Icon(Icons.chat),
+                onPressed: () {
+                  moveScreen(context, ChatScreen(roomId: "room1"));
+                },
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(18.0),
@@ -147,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       alignment: Alignment.center,
                       child: Text(
-                        "Energy Saved for yesterday:-\n ${joules} Jules",
+                        "Energy Saved:-\n ${joules} Joules",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           fontSize: 18,

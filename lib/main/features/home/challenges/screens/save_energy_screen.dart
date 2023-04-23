@@ -126,10 +126,11 @@ class _SaveEnergyScreenState extends State<SaveEnergyScreen> {
                           (int.parse(_usageController.text.toString()))) {
                         showSnackBar(context,
                             "Yes, you saved energy! Congrats! You got 10 more streaks! 🥳🔥");
-                        int newData = prefs.getInt("joules")! +
-                            (data -
+
+                        prefs.setInt(
+                            "joules",
+                            prefs.getInt("usage")! -
                                 int.parse(_usageController.text.toString()));
-                        prefs.setInt("joules", newData);
                         String streaks = "";
 
                         uid = firebaseAuth.currentUser?.uid ?? '';
@@ -140,8 +141,7 @@ class _SaveEnergyScreenState extends State<SaveEnergyScreen> {
                         });
                         moveScreen(context, StreakScreen(value: "5"));
 
-                        prefs.setInt("usage",
-                            int.parse(_usageController.text.toString()));
+                        prefs.setInt("usage", int.parse(_usageController.text));
                       } else {
                         showSnackBar(context,
                             "Sadly, you didn't save much energy today :(, please refer to challenges!");
