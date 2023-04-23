@@ -12,6 +12,7 @@ import 'package:terratrack/main/features/home/challenges/screens/save_energy_scr
 import 'package:terratrack/main/features/home/challenges/streaks/screens/streak_score_screen.dart';
 import 'package:terratrack/main/features/home/screens/home_screen.dart';
 import 'package:terratrack/main/features/home/your_energy/screens/your_energy_screen.dart';
+import 'package:terratrack/main/features/onboarding/screens/on_boarding_screen.dart';
 
 //firebase vars
 var firebaseAuth = FirebaseAuth.instance;
@@ -187,7 +188,11 @@ Widget makeDrawer(BuildContext context) {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () async {
+            await firebaseAuth.signOut();
+            moveScreen(context, OnboardingScreen());
+            uid = "";
+          },
         ),
       ],
     ),

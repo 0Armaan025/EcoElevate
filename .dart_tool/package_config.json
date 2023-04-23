@@ -440,6 +440,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "twilio_flutter",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/twilio_flutter-0.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "typed_data",
       "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.1",
       "packageUri": "lib/",
@@ -548,7 +554,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-23T04:37:08.304764Z",
+  "generated": "2023-04-23T06:30:35.796018Z",
   "generator": "pub",
   "generatorVersion": "2.19.1"
 }

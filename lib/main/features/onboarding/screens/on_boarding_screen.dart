@@ -18,9 +18,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   void initState() {
     super.initState();
-    uid = firebaseAuth.currentUser?.uid ?? '';
-    setState(() {});
-    getData();
+
+    if (firebaseAuth.currentUser == null) {
+    } else {
+      uid = firebaseAuth.currentUser?.uid ?? '';
+      setState(() {});
+      getData();
+    }
   }
 
   getData() {
@@ -49,10 +53,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 image: "assets/images/energy_usage.png",
               ),
               OnboardingPage(
-                title: "Reduce Waste",
-                description:
-                    "Track your waste production and get tips on how to reduce it",
-                image: "assets/images/waste_reduction.png",
+                title: "Get yourself energized",
+                description: "With great energy, comes great productivity!",
+                image: "assets/images/human_energy.png",
               ),
             ],
           ),

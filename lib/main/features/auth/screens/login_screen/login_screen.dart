@@ -134,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("New to TerraTrack?\t",
+                              Text("New to EcoElevate?\t",
                                   style: GoogleFonts.poppins(
                                     color: Colors.purple,
                                     fontSize: 15,
