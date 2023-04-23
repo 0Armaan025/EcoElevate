@@ -8,6 +8,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:terratrack/main/features/home/challenges/screens/save_energy_screen.dart';
 
 //firebase vars
 var firebaseAuth = FirebaseAuth.instance;
@@ -59,16 +60,17 @@ showSnackBar(BuildContext context, String content) {
   );
 }
 
+String theGlobalProfilePicture = "";
+
 Widget makeDrawer(BuildContext context) {
   return Drawer(
     child: ListView(
       children: <Widget>[
         UserAccountsDrawerHeader(
-          accountName: Text("John Doe"),
-          accountEmail: Text("johndoe@gmail.com"),
+          accountName: Text("Armaan"),
+          accountEmail: Text("armaan33000@gmail.com"),
           currentAccountPicture: CircleAvatar(
-            backgroundImage: NetworkImage(
-                "https://i.pinimg.com/originals/1e/12/0b/1e120bea5d00a3ce2e5a5a466edab08e.jpg"),
+            backgroundImage: NetworkImage("${theGlobalProfilePicture}"),
           ),
           decoration: BoxDecoration(
             gradient: LinearGradient(
@@ -80,18 +82,102 @@ Widget makeDrawer(BuildContext context) {
           ),
         ),
         ListTile(
+          tileColor: Colors.lightGreen,
           leading: Icon(Icons.home),
-          title: Text("Home"),
+          title: Text(
+            "Home",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
           onTap: () {},
         ),
+        Divider(
+          height: 1,
+          thickness: 5,
+          color: Colors.transparent,
+        ),
         ListTile(
+          tileColor: Colors.lightGreen,
           leading: Icon(Icons.settings),
-          title: Text("Settings"),
-          onTap: () {},
+          title: Text(
+            "Save Energy",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {
+            moveScreen(context, SaveEnergyScreen());
+          },
+        ),
+        Divider(
+          thickness: 5,
+          height: 1,
+          color: Colors.transparent,
         ),
         ListTile(
+          tileColor: Colors.lightGreen,
+          leading: Icon(Icons.settings),
+          title: Text(
+            "Your Energy?",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        Divider(
+          thickness: 5,
+          height: 1,
+          color: Colors.transparent,
+        ),
+        ListTile(
+          tileColor: Colors.lightGreen,
+          leading: Icon(Icons.settings),
+          title: Text(
+            "Streaks Time",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        Divider(
+          thickness: 5,
+          height: 10,
+          color: Colors.transparent,
+        ),
+        ListTile(
+          tileColor: Colors.lightGreen[300],
+          leading: Icon(Icons.settings),
+          title: Text(
+            "Settings",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
+          onTap: () {},
+        ),
+        Divider(
+          height: 1,
+          thickness: 5,
+          color: Colors.transparent,
+        ),
+        ListTile(
+          tileColor: Colors.lightGreen[400],
           leading: Icon(Icons.logout),
-          title: Text("Log Out"),
+          title: Text(
+            "Log Out",
+            style: GoogleFonts.rubik(
+              color: Colors.white,
+              fontSize: 18,
+            ),
+          ),
           onTap: () {},
         ),
       ],

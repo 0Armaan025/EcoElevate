@@ -90,27 +90,42 @@ class ChallengesScreen extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Container(
-              height: 50,
-              width: 60,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: Colors.blue,
-                shape: BoxShape.circle,
-                // borderRadius: BorderRadius.circular(90),
-              ),
-              child: IconButton(
-                icon: Icon(
-                  Icons.add,
-                  color: Colors.white,
+            InkWell(
+              onTap: () {
+                moveScreen(
+                    context, AddChallengeScreen(challengeName: challengeName));
+              },
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  side: BorderSide(
+                    // color:
+                    color: Colors.transparent,
+                  ),
                 ),
-                onPressed: () {
-                  moveScreen(
-                      context,
-                      AddChallengeScreen(
-                        challengeName: challengeName,
-                      ));
-                },
+                elevation: 12.0,
+                child: Container(
+                  height: 50,
+                  width: 160,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    // shape: BoxShape.circle,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 40.0),
+                    child: Center(
+                      child: Text(
+                        "Complete Challenge",
+                        style: GoogleFonts.roboto(
+                          color: Colors.white,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               ),
             ),
           ],

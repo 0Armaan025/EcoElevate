@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.terratrack.app-mergeDebugResources-21:/values-pt-rBR/values-pt-rBR.xml",
+            "outputFile": "com.example.terratrack.app-mergeDebugResources-22:/values-pt-rBR/values-pt-rBR.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Paul\\.gradle\\caches\\transforms-3\\ad3fb7e0e58165c0e3c87f8f0d79631f\\transformed\\jetified-play-services-basement-18.1.0\\res\\values-pt-rBR\\values.xml",

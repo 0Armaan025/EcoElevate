@@ -15,7 +15,8 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Unplug devices when not in use',
       'subtitle': 'Save energy and reduce your bill',
-      'instructions': '',
+      'instructions':
+          '1.)Whenever there are devices plugged in without any use, remove them. 2.)Example:- your phone is at 100% and it\'s still at charge, unlug it!\n3.)Done, it saves energy!',
       'icon': Icons.power_off,
       'image':
           'https://5.imimg.com/data5/JS/MK/OG/SELLER-3181704/2-pin-plug-1000x1000.jpg',
@@ -25,7 +26,8 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Use natural light instead of artificial light',
       'subtitle': 'Reduce your energy usage during the day',
-      'instructions': '',
+      'instructions':
+          '1.)If you are bored.\n2.)During the time of the day, you can go and study outside in the sunlight instead of sitting inside the whole day and being a couch potato.',
       'image':
           'https://images.pexels.com/photos/301599/pexels-photo-301599.jpeg?cs=srgb&dl=pexels-pixabay-301599.jpg&fm=jpg',
       'icon': Icons.wb_sunny,
@@ -34,7 +36,8 @@ class _EnergySavingChallengesWidgetState
     },
     {
       'title': 'Wash your clothes in cold water',
-      'instructions': '',
+      'instructions':
+          '1.)Whenever you are going to wash the clothes using machine or manually.\n2.)Use cold water (if times of summer) to wash those.\n3.)It will have same impact as the hot water and clothes will get washed.',
       'image':
           'https://www.ikea.com/in/en/images/products/renshacka-clothes-cover-transparent-white__1085564_pe860163_s5.jpg?f=s',
       'subtitle': 'Save energy and reduce your bill',
@@ -45,7 +48,8 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Lower your thermostat by 2 degrees',
       'subtitle': 'Save energy and reduce your bill',
-      'instructions': '',
+      'instructions':
+          '1.)Why always keeping it high?\n2.)If we want to conserve energy then we should always lower it.\n3.)This can be done according to our requirements but it should not be over the limit.',
       'image':
           'https://media.istockphoto.com/id/1194920571/photo/smart-thermostat-with-a-person-saving-energy-with-a-soft-shadow.jpg?s=612x612&w=0&k=20&c=EJ1JnujV-T1YYjVEEn3taVc0DsQWhaiAPlybKa6nHCw=',
       'icon': Icons.ac_unit,
@@ -55,7 +59,8 @@ class _EnergySavingChallengesWidgetState
     {
       'title': 'Cook meals in batches',
       'subtitle': 'Save energy and reduce your bill',
-      'instructions': '',
+      'instructions':
+          '1.)We should cook meals in batches, it reduces the cost of energy.\n2.)Done!',
       'image':
           'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9I4Hk8o1RmPlPTVq_YQzFboDDNxrXiprapiq0R4aj1Z1ubacO_orSf5mNYoOsFRqd2hA&usqp=CAU',
       'icon': Icons.local_dining,

@@ -1,7 +1,16 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:terratrack/main/common/constants.dart';
+import 'package:terratrack/main/features/home/challenges/models/challenge.dart';
 import 'package:terratrack/main/features/home/challenges/screens/challenges_screen.dart';
+import 'package:terratrack/main/features/home/challenges/streaks/screens/streak_screen.dart';
+import 'package:terratrack/main/features/home/screens/home_screen.dart';
+import 'package:video_player/video_player.dart';
 
 class AddChallengeScreen extends StatefulWidget {
   final String challengeName;
@@ -12,6 +21,49 @@ class AddChallengeScreen extends StatefulWidget {
 }
 
 class _AddChallengeScreenState extends State<AddChallengeScreen> {
+  File? videoFile;
+  late VideoPlayerController _controller;
+  late Future<void> _initializeVideoPlayerFuture;
+  String myUid = "";
+  String profilePicture = "";
+  String myName = "";
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _controller = VideoPlayerController.network(
+      'https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4',
+    );
+    _controller.setVolume(1);
+
+    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller.setLooping(true);
+    getData();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _controller.dispose();
+    
+  }
+
+  void getData() {
+    myUid = firebaseAuth.currentUser?.uid ?? '';
+
+    var firebaseData = firestore
+        .collection('users')
+        .doc(myUid)
+        .get()
+        .then((DocumentSnapshot snapshot) {
+      myName = snapshot.get('name');
+      profilePicture = snapshot.get('profilePicture');
+      setState(() {});
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +109,79 @@ class _AddChallengeScreenState extends State<AddChallengeScreen> {
                       size: 40,
                       color: Colors.white,
                     ),
-                    onPressed: () {},
+                    onPressed: () async {
+                      final ImagePicker _picker = ImagePicker();
+                      final XFile? video =
+                          await _picker.pickVideo(source: ImageSource.gallery);
+                      videoFile = File(video!.path);
+                      _controller = VideoPlayerController.file(videoFile!);
+                      _controller.addListener(() {
+                        setState(() {});
+                      });
+                      _controller.setLooping(true);
+                      _controller.initialize().then((_) => setState(() {}));
+                      _controller.play();
+                    },
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 38.0),
+              child: AspectRatio(
+                aspectRatio: 1,
+                // Use the VideoPlayer widget to display the video.
+                child: VideoPlayer(_controller),
+              ),
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+            Center(
+              child: GestureDetector(
+                onTap: () async {
+                  ChallengeModel model = ChallengeModel(
+                    challengeName: widget.challengeName,
+                    videoUrl: '',
+                    uid: uid,
+                    userName: myName,
+                    userProfilePicture: profilePicture,
+                  );
+
+                  String fileName =
+                      DateTime.now().millisecondsSinceEpoch.toString();
+                  Reference storageRef =
+                      FirebaseStorage.instance.ref().child('videos/$fileName');
+                  TaskSnapshot taskSnapshot =
+                      await storageRef.putFile(videoFile!);
+                  String downloadURL = await storageRef.getDownloadURL();
+                  model.videoUrl = downloadURL;
+                  firestore
+                      .collection('challenges')
+                      .doc(uid + widget.challengeName)
+                      .set(model.toMap())
+                      .then((value) {
+                    moveScreen(context, StreakScreen(),
+                        isPushReplacement: true);
+                  });
+                },
+                child: Container(
+                  height: 50,
+                  width: 240,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue,
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Submit Challenge 🔥",
+                    style: GoogleFonts.roboto(
+                      color: Colors.white,
+                      fontSize: 18,
+                    ),
                   ),
                 ),
               ),

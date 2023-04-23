@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\debug\AndroidManifest.xml:7:5-66
-15-->C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\debug\AndroidManifest.xml:7:22-64
+15-->C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml:34:5-66
+15-->C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml:34:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\Paul\.gradle\caches\transforms-3\314bddcf76e7789514d13a7878328ad7\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:26:5-79
 16-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\Paul\.gradle\caches\transforms-3\314bddcf76e7789514d13a7878328ad7\transformed\jetified-firebase-auth-21.3.0\AndroidManifest.xml:26:22-76

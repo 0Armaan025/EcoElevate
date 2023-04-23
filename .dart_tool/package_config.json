@@ -68,6 +68,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "csslib",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/csslib-0.17.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.5",
       "packageUri": "lib/",
@@ -186,6 +192,12 @@
       "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/hexcolor-3.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "html",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/html-0.15.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
     },
     {
       "name": "http",
@@ -344,6 +356,48 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "shared_preferences",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_android-2.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_foundation",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_foundation-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_linux-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_platform_interface-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_web-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/shared_preferences_windows-2.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/Paul/Downloads/flutter_windows_3.3.8-stable/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -446,6 +500,36 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "video_player",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/video_player-2.6.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "video_player_android",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_android-2.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "video_player_avfoundation",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_avfoundation-2.4.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "video_player_platform_interface",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_platform_interface-6.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
+      "name": "video_player_web",
+      "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/video_player_web-2.0.16",
+      "packageUri": "lib/",
+      "languageVersion": "2.17"
+    },
+    {
       "name": "win32",
       "rootUri": "file:///C:/Users/Paul/AppData/Local/Pub/Cache/hosted/pub.dev/win32-3.1.4",
       "packageUri": "lib/",
@@ -464,7 +548,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-04-22T08:52:19.223110Z",
+  "generated": "2023-04-23T02:12:52.160017Z",
   "generator": "pub",
   "generatorVersion": "2.19.1"
 }

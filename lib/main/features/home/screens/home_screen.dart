@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime? now;
   DateFormat? formatter;
   String? formatted;
+  String streaks = "";
 
   @override
   void initState() {
@@ -37,6 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
         .get()
         .then((DocumentSnapshot snapshot) {
       profilePicture = snapshot.get('profilePicture');
+      streaks = snapshot.get('streaks');
       setState(() {});
     });
   }
@@ -105,17 +107,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Card(
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
-                    elevation: 22.0,
+                    elevation: 42.0,
                     child: Container(
                       height: 200,
                       width: 150,
                       decoration: BoxDecoration(
-                        color: Colors.lightBlueAccent,
+                        color: Colors.lightBlue,
                         borderRadius: BorderRadius.circular(10),
                       ),
                       alignment: Alignment.center,
                       child: Text(
-                        "Total Streaks:-\n🔥",
+                        "Total Streaks:-\n ${streaks}🔥",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           fontSize: 23,

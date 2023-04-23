@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:terratrack/main/common/constants.dart';
@@ -18,6 +19,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   void initState() {
     super.initState();
     uid = firebaseAuth.currentUser?.uid ?? '';
+    setState(() {});
+    getData();
+  }
+
+  getData() {
+    var firebaseData = firestore
+        .collection('users')
+        .doc(uid)
+        .get()
+        .then((DocumentSnapshot snapshot) {
+      theGlobalProfilePicture = snapshot.get('profilePicture');
+      setState(() {});
+    });
   }
 
   @override

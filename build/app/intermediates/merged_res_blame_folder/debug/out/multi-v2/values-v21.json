@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.terratrack.app-mergeDebugResources-21:/values-v21/values-v21.xml",
+            "outputFile": "com.example.terratrack.app-mergeDebugResources-22:/values-v21/values-v21.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Paul\\.gradle\\caches\\transforms-3\\9008b2a9fb01102d26fd2f78c055a96b\\transformed\\core-1.9.0\\res\\values-v21\\values-v21.xml",
