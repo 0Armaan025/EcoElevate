@@ -53,6 +53,7 @@ INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\
 INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml:1:1-35:12
 INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml:1:1-35:12
 MERGED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml:1:1-35:12
+MERGED from [:shared_preferences_android] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:firebase_auth] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:firebase_storage] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
 MERGED from [:cloud_firestore] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\cloud_firestore\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-17:12
@@ -88,8 +89,8 @@ MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.5] C:\Users\Paul\.g
 MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\e52c4f36631d2a8e5a9560535aaf6885\transformed\jetified-exoplayer-dash-2.18.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\a455cc7f278c3fc36d54875344dd4975\transformed\jetified-exoplayer-smoothstreaming-2.18.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\8d419d2c623071447af56f0570162237\transformed\jetified-exoplayer-core-2.18.5\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Paul\.gradle\caches\transforms-3\c9f1ddc3e109464fd1ebf5a876e0dad8\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Paul\.gradle\caches\transforms-3\2d9ca6c295eb688d7ab9d0909fed936a\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Paul\.gradle\caches\transforms-3\0d750062f636d2fb591ce52533aca6cf\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.9.0] C:\Users\Paul\.gradle\caches\transforms-3\9008b2a9fb01102d26fd2f78c055a96b\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
@@ -145,6 +146,8 @@ uses-sdk
 INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_auth] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\firebase_auth\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:firebase_storage] C:\Users\Paul\Desktop\ARMAAN\Coding\TerraTrack\terratrack\build\firebase_storage\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -215,10 +218,10 @@ MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] C:\U
 MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\a455cc7f278c3fc36d54875344dd4975\transformed\jetified-exoplayer-smoothstreaming-2.18.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\8d419d2c623071447af56f0570162237\transformed\jetified-exoplayer-core-2.18.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.5] C:\Users\Paul\.gradle\caches\transforms-3\8d419d2c623071447af56f0570162237\transformed\jetified-exoplayer-core-2.18.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Paul\.gradle\caches\transforms-3\c9f1ddc3e109464fd1ebf5a876e0dad8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Paul\.gradle\caches\transforms-3\c9f1ddc3e109464fd1ebf5a876e0dad8\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Paul\.gradle\caches\transforms-3\c1463af6cb467bf02a2c891016443d37\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Paul\.gradle\caches\transforms-3\2d9ca6c295eb688d7ab9d0909fed936a\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Paul\.gradle\caches\transforms-3\2d9ca6c295eb688d7ab9d0909fed936a\transformed\jetified-core-ktx-1.9.0\AndroidManifest.xml:5:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\Paul\.gradle\caches\transforms-3\0d750062f636d2fb591ce52533aca6cf\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44

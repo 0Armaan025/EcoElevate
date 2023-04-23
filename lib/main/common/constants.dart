@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:terratrack/main/features/home/challenges/screens/save_energy_screen.dart';
+import 'package:terratrack/main/features/home/screens/home_screen.dart';
 
 //firebase vars
 var firebaseAuth = FirebaseAuth.instance;
@@ -91,7 +92,9 @@ Widget makeDrawer(BuildContext context) {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            moveScreen(context, HomeScreen());
+          },
         ),
         Divider(
           height: 1,
@@ -102,7 +105,7 @@ Widget makeDrawer(BuildContext context) {
           tileColor: Colors.lightGreen,
           leading: Icon(Icons.settings),
           title: Text(
-            "Save Energy",
+            "Saved Energy?",
             style: GoogleFonts.rubik(
               color: Colors.white,
               fontSize: 18,

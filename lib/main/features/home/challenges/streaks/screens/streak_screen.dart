@@ -5,6 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:terratrack/main/common/constants.dart';
 
 class StreakScreen extends StatefulWidget {
+  final value;
+  const StreakScreen({super.key, this.value = "1"});
   @override
   _StreakScreenState createState() => _StreakScreenState();
 }
@@ -28,20 +30,24 @@ class _StreakScreenState extends State<StreakScreen>
       ),
     );
 
+    getData();
+  }
+
+  getData() {
     String streaks = "";
 
     uid = firebaseAuth.currentUser?.uid ?? '';
-    final docRef = firestore.collection('users').doc(uid);
-    docRef.get().then((DocumentSnapshot snapshot) {
+    var data = firestore
+        .collection('users')
+        .doc(uid)
+        .get()
+        .then((DocumentSnapshot snapshot) {
       streaks = snapshot.get('streaks');
-      setState(() {});
-    });
-
-    int streak = int.parse(streaks);
-    streak = streak + 1;
-
-    docRef.update({'streaks': streak}).then((value) {
-      setState(() {});
+      int streak = int.parse(streaks) + int.parse(widget.value);
+      firestore
+          .collection('users')
+          .doc(uid)
+          .update({'streaks': streak.toString()});
     });
   }
 

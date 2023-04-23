@@ -41,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
       streaks = snapshot.get('streaks');
       setState(() {});
     });
+    setState(() {});
   }
 
   @override
@@ -141,10 +142,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       alignment: Alignment.center,
                       child: Text(
-                        "Energy Saved:- ",
+                        "Energy Saved for yesterday:- 0 Jules",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
-                          fontSize: 23,
+                          fontSize: 18,
                         ),
                       ),
                     ),
