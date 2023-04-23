@@ -9,7 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:terratrack/main/features/home/challenges/screens/save_energy_screen.dart';
+import 'package:terratrack/main/features/home/challenges/streaks/screens/streak_score_screen.dart';
 import 'package:terratrack/main/features/home/screens/home_screen.dart';
+import 'package:terratrack/main/features/home/your_energy/screens/your_energy_screen.dart';
 
 //firebase vars
 var firebaseAuth = FirebaseAuth.instance;
@@ -130,7 +132,9 @@ Widget makeDrawer(BuildContext context) {
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            moveScreen(context, YourEnergyScreen());
+          },
         ),
         Divider(
           thickness: 5,
@@ -141,13 +145,15 @@ Widget makeDrawer(BuildContext context) {
           tileColor: Colors.lightGreen,
           leading: Icon(Icons.settings),
           title: Text(
-            "Streaks Time",
+            "Streak Score",
             style: GoogleFonts.rubik(
               color: Colors.white,
               fontSize: 18,
             ),
           ),
-          onTap: () {},
+          onTap: () {
+            moveScreen(context, StreakScoreScreen());
+          },
         ),
         Divider(
           thickness: 5,

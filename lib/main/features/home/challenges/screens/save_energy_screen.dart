@@ -126,6 +126,10 @@ class _SaveEnergyScreenState extends State<SaveEnergyScreen> {
                           (int.parse(_usageController.text.toString()))) {
                         showSnackBar(context,
                             "Yes, you saved energy! Congrats! You got 10 more streaks! 🥳🔥");
+                        int newData = prefs.getInt("joules")! +
+                            (data -
+                                int.parse(_usageController.text.toString()));
+                        prefs.setInt("joules", newData);
                         String streaks = "";
 
                         uid = firebaseAuth.currentUser?.uid ?? '';

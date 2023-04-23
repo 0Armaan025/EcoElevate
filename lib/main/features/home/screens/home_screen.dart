@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:terratrack/main/common/constants.dart';
 import 'package:terratrack/main/features/home/challenges/widgets/challenges_widget.dart';
 
@@ -30,7 +31,9 @@ class _HomeScreenState extends State<HomeScreen> {
     print(formatted);
   }
 
-  getData() {
+  int joules = 0;
+
+  getData() async {
     uid = firebaseAuth.currentUser?.uid ?? '';
     var firebaseData = firestore
         .collection('users')
@@ -41,6 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
       streaks = snapshot.get('streaks');
       setState(() {});
     });
+    final prefs = await SharedPreferences.getInstance();
+    joules = prefs.getInt("joules")!;
     setState(() {});
   }
 
@@ -142,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       alignment: Alignment.center,
                       child: Text(
-                        "Energy Saved for yesterday:- 0 Jules",
+                        "Energy Saved for yesterday:-\n ${joules} Jules",
                         textAlign: TextAlign.center,
                         style: GoogleFonts.poppins(
                           fontSize: 18,
